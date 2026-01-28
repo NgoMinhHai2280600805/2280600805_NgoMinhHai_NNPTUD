@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Quản lý Posts & Comments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-add { background: #28a745; color: white; }
+        .btn-edit { background: #ffc107; }
+        .btn-delete { background: #dc3545; color: white; }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .deleted {
+            text-decoration: line-through;
+            color: gray;
+            opacity: 0.6;
+        }
+
+
+        .post-info {
+            flex-grow: 1;
+        }
+
+        .actions button {
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="card">
+        <h1>📌 Quản lý Posts</h1>
+
+        <input type="text" id="titleInput" placeholder="Nhập tiêu đề post">
+        <input type="number" id="viewsInput" placeholder="Lượt xem">
+        <button class="btn-add" onclick="addPost()">+ Thêm Post</button>
+
+        <ul id="postList"></ul>
+    </div>
+
+    <div class="card">
+        <h2>💬 Quản lý Comments</h2>
+
+        <input type="text" id="commentText" placeholder="Nội dung comment">
+        <input type="text" id="commentPostId" placeholder="Post ID">
+        <button class="btn-add" onclick="addComment()">+ Thêm Comment</button>
+
+        <ul id="commentList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
