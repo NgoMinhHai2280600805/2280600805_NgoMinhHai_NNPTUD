@@ -1,4 +1,4 @@
-# BÀI TẬP JSON tuần 2
+# BÀI TẬP JSON Tuân2
 
-**Họ tên:** Ngô Minh Hải  
-**MSSV:** 2280600805  
+**Họ tên:** Ngô Minh Hải 
+**MSSV:** 2280600805
